@@ -57,10 +57,27 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+  => Asynchronous, Event Driven so there is no blocking and very fast because which is build in V8 server.
+  => It can be used to built single page, multipage and hybrid web application, and also allows to setup middleware to respond http request.
+
 1. Understand and explain the use of Middleware.
+  => ExpressJS is a prebuilt NodeJS framework that can help you in creating server-side web applications faster and smarter. Simplicity, minimalism, flexibility, scalability are some of its characteristics and since it is made in NodeJS itself, it inherited its performance as well.
+
 1. The basic principles of the REST architectural style.
+  => client-server architecture.
+  => stateless because communication between the client and the server always contains all the information needed to perform the request.
+  => The client, the server and any intermediary components can all cache resources in order to improve performance.
+  => Uniform interface between components simplifies the architecture, as all components follow the same rules to speak to one another.
+  => Layered system allows components to be independent and thus easily replaceable or extendable.
+  => optionally provides code on demand.
+
 1. Understand and explain the use of Express Routers.
+  => use multiple times to define groups of routes.
+  => to process requests.
+  => to validate parameters using . param()
+
 1. Describe tooling used to manually test the correctness of an API.
+  => API testing is a set of quality assurance actions that include sending calls to the API. For that we have so many tools like postman, insomnia. Usually, API testing is performed on APIs produced by the in-house development team. We don’t test third-party APIs, but we can test the way our software accepts their requests. 
 
 ## Instructions
 
