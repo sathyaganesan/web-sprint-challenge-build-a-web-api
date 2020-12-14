@@ -57,25 +57,42 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+  => Asynchronous, Event Driven so there is no blocking and very fast because which is build in V8 server.
+  => It can be used to built single page, multipage and hybrid web application, and also allows to setup middleware to respond http request.
+
 1. Understand and explain the use of Middleware.
+  => ExpressJS is a prebuilt NodeJS framework that can help you in creating server-side web applications faster and smarter. Simplicity, minimalism, flexibility, scalability are some of its characteristics and since it is made in NodeJS itself, it inherited its performance as well.
+
 1. The basic principles of the REST architectural style.
+  => client-server architecture.
+  => stateless because communication between the client and the server always contains all the information needed to perform the request.
+  => The client, the server and any intermediary components can all cache resources in order to improve performance.
+  => Uniform interface between components simplifies the architecture, as all components follow the same rules to speak to one another.
+  => Layered system allows components to be independent and thus easily replaceable or extendable.
+  => optionally provides code on demand.
+
 1. Understand and explain the use of Express Routers.
+  => use multiple times to define groups of routes.
+  => to process requests.
+  => to validate parameters using . param()
+
 1. Describe tooling used to manually test the correctness of an API.
+  => API testing is a set of quality assurance actions that include sending calls to the API. For that we have so many tools like postman, insomnia. Usually, API testing is performed on APIs produced by the in-house development team. We don’t test third-party APIs, but we can test the way our software accepts their requests. 
 
 ## Instructions
 
 ### Project Structure and Dependencies
 
-- [ ] Do not move or rename existing files or folders.
-- [ ] All necessary libraries are already installed in the project.
+- [X] Do not move or rename existing files or folders.
+- [X] All necessary libraries are already installed in the project.
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement MVP on your newly created `<firstName-lastName>` branch.
-- [ ] Commit & push your code regularly and meaningfully.
+- [x] Create a forked copy of this project.
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [X] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [X] Implement MVP on your newly created `<firstName-lastName>` branch.
+- [X] Commit & push your code regularly and meaningfully.
 
 ### Task 2: Project Requirements (MVP)
 
@@ -85,9 +102,9 @@ Your finished project must include all of the following requirements:
 
 A _"test"_ script already exists you can use to run tests against your code.
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server.
-- [ ] Use _nodemon_ as a development time dependency only that is not deployed to production.
+- [X] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
+- [X] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server.
+- [X] Use _nodemon_ as a development time dependency only that is not deployed to production.
 
 #### Build an API
 
