@@ -11,7 +11,14 @@ router.post('/api/actions', (req, res) => {
     }
     actions.insert(req.body)
         .then((action) => {
-            res.status(200).json(action);
+            // if (req.body.description.length > 50) {
+                res.status(200).json(action);
+            // } else {
+            //     res.status(400).json({
+            //         Message: "Description characters should be more than 50"
+            //     })
+            // }
+           
         })
         .catch((error) => {
             console.log(error);
