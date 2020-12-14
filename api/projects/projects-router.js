@@ -3,17 +3,33 @@ const express = require('express');
 const projects = require('./projects-model');
 const router = express.Router();
 
-router.get('/api/projects', (req, res) => {
-    projects.get()
+router.post('/api/projects', (req, res, next) => {
+    if (!req.body.name || !req.body.description) {
+        res.status(400).json({
+            Message: "Name or description is missing"
+        })
+    }
+    projects.insert(req.body)
+        .then((project) => {
+            res.status(200).json(project);
+        })
+        .catch((error) => {
+            next(error);
+    })
+})
+
+router.get('/api/projects', (req, res, next) => {
+    projects.get(req.params.id)
         .then((projects) => {
             res.status(200).json(projects)
         })
         .catch((error) => {
-            console.log(error);
-            res.status(500).json({
-                Message: "Projects not found"
-            })
-    })
-}) 
+            next(error);
+        })
+});
+
+
+
+
 
 module.exports = router;
