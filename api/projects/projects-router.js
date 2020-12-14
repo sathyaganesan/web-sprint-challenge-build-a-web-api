@@ -80,4 +80,17 @@ router.delete('/api/projects/:id', (req, res, next) => {
         .catch((error) => next(error));
 })
 
+router.get('/api/projects/:id/actions', (req, res, next) => {
+    if (!req.params.id) {
+        res.status(400).json({
+            Message: "ID with specific project does not exsist"
+        })
+    }
+    projects.getProjectActions(req.params.id)
+        .then((actions) => {
+            res.status(200).json(actions);
+        })
+        .catch((error) => next(error));
+})
+
 module.exports = router;
