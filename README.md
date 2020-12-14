@@ -83,16 +83,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 ### Project Structure and Dependencies
 
-- [ ] Do not move or rename existing files or folders.
-- [ ] All necessary libraries are already installed in the project.
+- [X] Do not move or rename existing files or folders.
+- [X] All necessary libraries are already installed in the project.
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement MVP on your newly created `<firstName-lastName>` branch.
-- [ ] Commit & push your code regularly and meaningfully.
+- [x] Create a forked copy of this project.
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [X] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [X] Implement MVP on your newly created `<firstName-lastName>` branch.
+- [X] Commit & push your code regularly and meaningfully.
 
 ### Task 2: Project Requirements (MVP)
 
@@ -102,9 +102,9 @@ Your finished project must include all of the following requirements:
 
 A _"test"_ script already exists you can use to run tests against your code.
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server.
-- [ ] Use _nodemon_ as a development time dependency only that is not deployed to production.
+- [X] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
+- [X] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server.
+- [X] Use _nodemon_ as a development time dependency only that is not deployed to production.
 
 #### Build an API
 
