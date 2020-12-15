@@ -1,14 +1,10 @@
 // Write your "projects" router here!
 const express = require('express');
 const projects = require('./projects-model');
+const { validateProjectId, validateData } = require('./project-middleware');
 const router = express.Router();
 
-router.post('/api/projects', (req, res, next) => {
-    if (!req.body.name || !req.body.description) {
-        res.status(400).json({
-            Message: "Name or description is missing"
-        })
-    }
+router.post('/api/projects', validateData(), (req, res, next) => {
     projects.insert(req.body)
         .then((project) => {
             res.status(200).json(project);
@@ -28,29 +24,12 @@ router.get('/api/projects', (req, res, next) => {
         })
 });
 
-router.get('/api/projects/:id', (req, res, next) => {
-    projects.get(req.params.id)
-        .then((project) => {
-            if (project > 0) {
-                res.status(200).json(project)
-            } else {
-                res.status(400).json({
-                    Message: "ID with specific project does not exsist"
-                })
-            }
-        })
-        .catch((error) => {
-            next(error);
-        })
+router.get('/api/projects/:id', validateProjectId(), (req, res) => {
+    res.status(200).json(req.project); //where this project comes from
 });
 
-// How to change only description without name
-router.put('/api/projects/:id', (req, res, next) => {
-    if (!req.body.name) {
-        res.status(400).json({
-            Message: "Project Name or description is missing"
-        })
-    }
+// How to change only description without name other way
+router.put('/api/projects/:id', validateData(), (req, res, next) => {
     projects.update(req.params.id, req.body)
         .then((project) => {
             if (req.params.id || req.boby) {
